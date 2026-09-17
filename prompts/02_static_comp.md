@@ -12,3 +12,4 @@ runs/ir_report.yaml — written according to ir_report.md.
 1. Number ids so that no id is duplicated within the file.
 2. In trace, list the SRS sentences that directly support the element.
 3. Whatever cannot be determined from the SRS alone, decide it yourself and record it according to ir_report.md.
+4. Put one blank line between the top-level keys (classes, relationships, enumerations).
