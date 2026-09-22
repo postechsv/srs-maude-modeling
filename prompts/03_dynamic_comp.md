@@ -9,7 +9,7 @@ runs/dynamic_comp.yaml — follows the format of dynamic_comp_schema.yaml.
 runs/ir_report.yaml — written according to ir_report.md.
 
 # Conditions
-1. Split rules into units that cannot be divided further (atomic).
+1. Each rule must describe one atomic state transition. Keep all effects that must occur together within the same rule. For the same event, use separate rules when different conditions lead to different effects.
 2. Number ids so that no id is duplicated within the file.
 3. In trace, list the SRS sentences that directly support the rule.
 4. Whatever cannot be determined from the SRS alone, decide it yourself, explicitly reflect the decision in the IR, and record it according to ir_report.md.
