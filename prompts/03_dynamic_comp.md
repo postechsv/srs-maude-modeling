@@ -12,7 +12,7 @@ runs/ir_report.yaml — written according to ir_report.md.
 1. Split rules into units that cannot be divided further (atomic).
 2. Number ids so that no id is duplicated within the file.
 3. In trace, list the SRS sentences that directly support the rule.
-4. Whatever cannot be determined from the SRS alone, decide it yourself and record it according to ir_report.md.
+4. Whatever cannot be determined from the SRS alone, decide it yourself, explicitly reflect the decision in the IR, and record it according to ir_report.md.
 5. Use names, types, and terminology consistent with static_comp.yaml.
 6. Include rules required by the SRS even if they require elements not defined in static_comp.yaml.
 7. Record any elements required by these rules but missing from static_comp.yaml in ir_report.yaml. Use the format "RULE-M-01" for the id of each rule requiring elements absent from static_comp.yaml.
