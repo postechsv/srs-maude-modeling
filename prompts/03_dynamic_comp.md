@@ -16,3 +16,4 @@ runs/ir_report.yaml — written according to ir_report.md.
 5. Use names, types, and terminology consistent with static_comp.yaml.
 6. Include rules required by the SRS even if they require elements not defined in static_comp.yaml.
 7. Record any elements required by these rules but missing from static_comp.yaml in ir_report.yaml. Use the format "RULE-M-01" for the id of each rule requiring elements absent from static_comp.yaml.
+8. Describe each rule in natural language within the given IR schema so that translating it into Maude requires no new assumptions or decisions.
