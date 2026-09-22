@@ -15,4 +15,4 @@ runs/ir_report.yaml — written according to ir_report.md.
 4. Whatever cannot be determined from the SRS alone, decide it yourself and record it according to ir_report.md.
 5. Use names, types, and terminology consistent with static_comp.yaml.
 6. Include rules required by the SRS even if they require elements not defined in static_comp.yaml.
-7. Record any elements required by these rules but missing from static_comp.yaml in ir_report.yaml.
+7. Record any elements required by these rules but missing from static_comp.yaml in ir_report.yaml. Use the format "RULE-M-01" for the id of each rule requiring elements absent from static_comp.yaml.
