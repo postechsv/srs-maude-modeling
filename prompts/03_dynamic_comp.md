@@ -12,7 +12,7 @@ runs/ir_report.yaml — written according to ir_report.md.
 1. Each rule must describe one atomic state transition. Keep all effects that must occur together within the same rule. For the same event, use separate rules when different conditions lead to different effects.
 2. Number ids so that no id is duplicated within the file.
 3. In trace, list the SRS sentences that directly support the rule.
-4. Whatever cannot be determined from the SRS alone, decide it yourself, explicitly reflect the decision in the IR, and record it according to ir_report.md.
+4. Resolve any ambiguity in the SRS and make all additional decisions needed to translate the IR into Maude without further design decisions. Explicitly reflect these decisions in the IR and record them according to ir_report.md.
 5. Use names, types, and terminology consistent with static_comp.yaml.
 6. Include rules required by the SRS even if they require elements not defined in static_comp.yaml.
 7. Record any elements required by these rules but missing from static_comp.yaml in ir_report.yaml. Use the format "RULE-M-01" for the id of each rule requiring elements absent from static_comp.yaml.
