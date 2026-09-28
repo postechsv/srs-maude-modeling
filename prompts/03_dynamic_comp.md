@@ -16,4 +16,9 @@ runs/ir_report.yaml — written according to ir_report.md.
 5. Use names, types, and terminology consistent with static_comp.yaml.
 6. Include rules required by the SRS even if they require elements not defined in static_comp.yaml.
 7. Record any elements required by these rules but missing from static_comp.yaml in ir_report.yaml. Use the format "RULE-M-01" for the id of each rule requiring elements absent from static_comp.yaml.
-8. Using the definitions in static_comp.yaml, write each field in natural language. In precondition, explicitly specify the event and its inputs, and the objects to be matched, including their classes, attribute values or variable bindings, and relationships. In guard, specify the conditions on those values. In postcondition, explicitly specify the resulting state, including what is created, changed, deleted, or preserved. When translating the IR into Maude, it must be possible to write the LHS, condition, and RHS from precondition, guard, and postcondition, respectively, without inferring missing information from the other fields.
+8. Using the definitions in static_comp.yaml, write each field in natural language following the sentence templates in dynamic_comp_schema.yaml. Replace every bracketed placeholder with concrete information. Write precondition, guard, and postcondition in sufficient detail to construct the Maude LHS, condition, and RHS, respectively, without inferring missing information from the other fields.
+9. Explicitly define the state representation and the types and meanings of its relevant components in each rule. Do not rely on definitions given only in other rules.
+10. Keep the definitions of shared state structures and elements consistent across all rules.
+11. Describe postcondition as the resulting state and its values, not as a sequence of processing steps.
+12. If a category requested by the template has no applicable elements, explicitly state that there are none rather than inventing elements to fill it.
+13. If there is no additional condition beyond the precondition match, leave guard as an empty string instead of filling its sentence template.
