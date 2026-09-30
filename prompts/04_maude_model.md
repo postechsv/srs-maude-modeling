@@ -12,3 +12,4 @@ runs/model.maude — a Maude object-oriented module.
 2. Convert each rule so that event and existing become the left-hand side, guard becomes the condition, and postcondition becomes the right-hand side. Use rl when guard is empty, and crl otherwise.
 3. Use the rule id as the rule label.
 4. Preserve the variable names used in the IR exactly. Do not rename or abbreviate them.
+5. Represent the messages described in event and postcondition as Maude messages of sort Msg.
