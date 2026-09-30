@@ -23,3 +23,5 @@ runs/ir_report.yaml — written according to ir_report.md.
 12. If a category requested by the template has no applicable elements, explicitly state that there are none rather than inventing elements to fill it.
 13. If there is no additional condition beyond the precondition match, leave guard as an empty string instead of filling its sentence template.
 14. Use descriptive variable names that clearly indicate what each variable represents. Distinguish individual objects from collections, and distinguish input, existing, and resulting values where relevant. Avoid single-letter variable names and abbreviations.
+
+15. Start each sentence on a new line within each field, keeping all lines of the field value at the same indentation level.
