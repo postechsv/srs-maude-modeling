@@ -25,3 +25,4 @@ runs/ir_report.yaml — written according to ir_report.md.
 14. Use descriptive variable names that clearly indicate what each variable represents. Distinguish individual objects from collections, and distinguish input, existing, and resulting values where relevant. Avoid single-letter variable names and abbreviations.
 
 15. Start each sentence on a new line within each field, keeping all lines of the field value at the same indentation level.
+16. Do not introduce separate failure-handling rules unless explicitly required by the SRS. Express prohibitions and restrictions as preconditions or guards of the corresponding operation rules.
