@@ -14,3 +14,4 @@ runs/model.maude — a Maude object-oriented module.
 4. Use the rule id as the rule label.
 5. Preserve the variable names used in the IR exactly. Do not rename or abbreviate them.
 6. Represent the messages described in event and postcondition as Maude messages of sort Msg.
+7. Do not define an initial state. It is written separately.
