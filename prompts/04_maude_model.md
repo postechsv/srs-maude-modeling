@@ -13,4 +13,4 @@ runs/model.maude — a Maude object-oriented module.
 3. Represent object collections separately rather than inside a single constructor wrapping the entire system state. Each rule must match only the objects or collections it reads or changes; leave the remaining configuration implicit.
 4. Use the rule id as the rule label.
 5. Preserve the variable names used in the IR exactly. Do not rename or abbreviate them.
-6. Represent the messages described in precondition.msgs and postcondition.msgs as Maude messages of sort Msg.
+6. Represent the messages declared in static_comp.yaml as Maude messages of sort Msg.

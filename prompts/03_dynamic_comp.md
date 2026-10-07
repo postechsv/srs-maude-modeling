@@ -9,7 +9,7 @@ runs/dynamic_comp.yaml — follows the format of dynamic_comp_schema.yaml.
 runs/ir_report.yaml — written according to ir_report.md.
 
 # Conditions
-1. Each rule must describe one atomic state transition. Keep all effects that must occur together within the same rule. For the same event, use separate rules when different conditions lead to different effects.
+1. Each rule must describe one atomic state transition. Keep all effects that must occur together within the same rule. For the same message, use separate rules when different conditions lead to different effects.
 2. Number ids so that no id is duplicated within the file.
 3. In trace, list the SRS sentences that directly support the rule.
 4. Resolve any ambiguity in the SRS and make all additional decisions needed to translate the IR into Maude without further design decisions. Explicitly reflect these decisions in the IR and record them according to ir_report.md.
