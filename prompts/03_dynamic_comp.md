@@ -26,3 +26,4 @@ runs/ir_report.yaml — written according to ir_report.md.
 
 15. Start each sentence on a new line within each field, keeping all lines of the field value at the same indentation level.
 16. Do not introduce separate failure-handling rules unless explicitly required by the SRS. Express prohibitions and restrictions as preconditions or guards of the corresponding operation rules.
+17. Put one blank line between rules.
