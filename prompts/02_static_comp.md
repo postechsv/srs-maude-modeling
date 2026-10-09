@@ -14,3 +14,4 @@ runs/ir_report.yaml — written according to ir_report.md.
 3. Whatever cannot be determined from the SRS alone, decide it yourself, explicitly reflect the decision in the IR, and record it according to ir_report.md.
 4. Put one blank line between the top-level keys (classes, relationships, enumerations, messages).
 5. When a type name alone does not fully specify its meaning or representation, include the missing details in parentheses after the type name in the type field. (ex. Date (YYYY-MM-DD))
+6. List the recipient as the first parameter of each message.
