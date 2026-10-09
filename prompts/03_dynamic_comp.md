@@ -16,7 +16,7 @@ runs/ir_report.yaml — written according to ir_report.md.
 6. Use only the classes, attributes, relationships, enumerations, and messages declared in static_comp.yaml. Do not introduce new ones.
    - Within these elements, resolve any ambiguity in the SRS and make all additional decisions needed to translate the IR into Maude without further design decisions. Explicitly reflect these decisions in the IR and record them according to ir_report.md.
 8. Using the definitions in static_comp.yaml, write each field in natural language following the sentence templates in dynamic_comp_schema.yaml. Replace every bracketed placeholder with concrete information. Write precondition, guard, and postcondition in sufficient detail to construct the Maude LHS, condition, and RHS, respectively, without inferring missing information from the other fields.
-9. Do not enumerate state elements unrelated to the rule.
+9. For each object, mention only the attributes the rule reads or changes. Attributes not mentioned remain unchanged.
 10. Keep the definitions of shared state structures and elements consistent across all rules.
 11. Describe postcondition as the resulting state and its values, not as a sequence of processing steps.
 12. If a category requested by the template has no applicable elements, explicitly state that there are none rather than inventing elements to fill it.
