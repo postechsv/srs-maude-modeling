@@ -15,4 +15,5 @@ runs/ir_report.yaml — written according to ir_report.md.
 4. Put one blank line between the top-level keys (classes, relationships, enumerations, messages).
 5. When a type name alone does not fully specify its meaning or representation, include the missing details in parentheses after the type name in the type field. (ex. Date (YYYY-MM-DD))
 6. List the recipient as the first parameter of each message.
-7. Values that the system needs to perform the behaviors in the SRS are declared: values obtained from outside are received as parameters of the request message, and values kept internally are declared as attributes; nothing is supplied by an execution environment outside the IR. Do not declare results or records that the SRS does not require.
+7. Values that the system needs to perform the behaviors in the SRS are declared: values obtained from outside are received as parameters of the request message, and values kept internally are declared as attributes; nothing is supplied by an execution environment outside the IR.
+8. Do not declare results or records that the SRS does not require.
