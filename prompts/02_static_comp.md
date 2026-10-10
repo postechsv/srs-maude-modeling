@@ -15,4 +15,4 @@ runs/ir_report.yaml — written according to ir_report.md.
 4. Put one blank line between the top-level keys (classes, relationships, enumerations, messages).
 5. When a type name alone does not fully specify its meaning or representation, include the missing details in parentheses after the type name in the type field. (ex. Date (YYYY-MM-DD))
 6. List the recipient as the first parameter of each message.
-7. Values that the system obtains from outside or keeps internally are also declared, as attributes or message parameters; nothing is supplied by an execution environment outside the IR.
+7. Values that the system obtains from outside are received as parameters of the request message, and values that the system keeps internally are declared as attributes; nothing is supplied by an execution environment outside the IR.
