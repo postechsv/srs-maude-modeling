@@ -13,3 +13,4 @@ runs/model.maude — a Maude object-oriented module.
 4. Use the rule id as the rule label.
 5. Preserve the variable names used in the IR exactly. Do not rename or abbreviate them.
 6. Represent the messages declared in static_comp.yaml as Maude messages of sort Msg.
+7. The left-hand side and the right-hand side of each rule consist only of objects and messages written out explicitly; do not wrap them in function calls or produce them with function calls. Functions may appear only inside attribute values and conditions.
