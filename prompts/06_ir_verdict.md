@@ -14,3 +14,4 @@ runs/ir_verdict_a.yaml, runs/ir_verdict_b.yaml, runs/ir_verdict.yaml
 
 # Conditions
 1. Do not perform the sub-steps yourself, and do not change their output files.
+2. Give each subagent, together with its prompt, the instructions under "# Instructions from the Master".
