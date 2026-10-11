@@ -14,7 +14,7 @@ results:
   - id: <N id>
     evidence: [<S ids and report ids that support this statement>]
     supported: <true | false>
-    reason: <only when supported is false: what the statement states, and what the SRS or report says instead>
+    reason: <in detail, whether supported is true or false: what the statement states, and how the SRS sentences or report entries in evidence state it or fail to state it>
 
 # Conditions
 1. Read only the files listed in Input. Do not read or refer to any other file, including the IR.

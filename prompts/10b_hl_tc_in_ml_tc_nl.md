@@ -13,7 +13,7 @@ results:
   - id: <test case id>
     evidence: [<N ids that this test case matches>]
     supported: <true | false>
-    reason: <only when supported is false: which part of the test case ml_tc_nl.yaml does not state, or states differently>
+    reason: <in detail, whether supported is true or false: what the test case states, and which statements state each part of it, or which part no statement states>
 
 # Conditions
 1. Read only the files listed in Input. Do not read or refer to any other file, including the ML TC, the IR, the SRS, and the ML TC report.

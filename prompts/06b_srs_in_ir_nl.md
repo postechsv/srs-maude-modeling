@@ -13,7 +13,7 @@ results:
   - id: <S id>
     evidence: [<N ids that this sentence matches>]
     supported: <true | false>
-    reason: <only when supported is false: which part of the sentence is missing or stated differently in ir_nl.yaml>
+    reason: <in detail, whether supported is true or false: what the sentence states, and which statements state each part of it, or which part no statement states>
 
 # Conditions
 1. Read only the files listed in Input. Do not read or refer to any other file, including the IR and the report.
