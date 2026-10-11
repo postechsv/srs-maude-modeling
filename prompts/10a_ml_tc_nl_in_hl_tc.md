@@ -14,7 +14,7 @@ results:
   - id: <N id>
     evidence: [<test case ids and report ids that support this statement>]
     supported: <true | false>
-    reason: <in detail, whether supported is true or false: what the statement states, and how the test case or report entries in evidence state it or fail to state it>
+    reason: <in detail, whether supported is true or false: split the statement into its parts, and for each part, quote the exact phrase in the test case or a report entry that supports it, name that test case or entry, and explain how the phrase supports the part, including any difference in wording or scope; when supported is false, state which part nothing supports, or what the test case or report states instead>
 
 # Conditions
 1. Read only the files listed in Input. Do not read or refer to any other file, including the ML TC, the IR, and the SRS.

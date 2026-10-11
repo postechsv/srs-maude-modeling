@@ -13,7 +13,7 @@ results:
   - id: <S id>
     evidence: [<N ids that this sentence matches>]
     supported: <true | false>
-    reason: <in detail, whether supported is true or false: what the sentence states, and which statements state each part of it, or which part no statement states>
+    reason: <in detail, whether supported is true or false: split the sentence into its parts, and for each part, quote the exact phrase in a statement that supports it, name that statement, and explain how the phrase supports the part, including any difference in wording or scope; when supported is false, state which part no statement supports or which part is stated differently>
 
 # Conditions
 1. Read only the files listed in Input. Do not read or refer to any other file, including the IR and the report.
