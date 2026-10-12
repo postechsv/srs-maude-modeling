@@ -12,7 +12,6 @@ pass: <true only if every test case is supported; otherwise false>
 results:
   - id: <test case id>
     evidence: [<N ids that this test case matches>]
-    unrelated: [<every other N id, each compared with this test case and found not to match it>]
     supported: <true | false>
     reason: <in detail, whether supported is true or false: split the test case into its parts, and for each part, quote the exact phrase in a statement that supports it, name that statement, and explain how the phrase supports the part, including any difference in wording or scope; when supported is false, state which part no statement supports or which part is stated differently>
 
@@ -21,4 +20,3 @@ results:
 2. Check every test case of hl_tc.yaml in order.
 3. A test case is supported if everything its scenario and expected state semantically matches what the statements for that test case state. List all the statements it matches in evidence. If any part of the test case matches no statement, set supported to false.
 4. If no statement matches the test case, write evidence: [] and set supported to false.
-5. Compare each test case with every statement, one at a time. Put each N id in evidence if the test case matches it, and in unrelated otherwise. Every N id must appear in exactly one of evidence and unrelated.
