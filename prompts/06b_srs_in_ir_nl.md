@@ -1,5 +1,5 @@
-[IR Verdict B: SRS → ir_nl.yaml]
-Describe how everything the SRS states corresponds to ir_nl.yaml. Do not judge whether a sentence is acceptably covered.
+[IR Verdict B: SRS ⊆ ir_nl.yaml]
+Check whether everything the SRS states is contained in ir_nl.yaml.
 A statement is each item under statements in ir_nl.yaml.
 
 # Input
@@ -8,13 +8,15 @@ inputs/srs_numbered.yaml, runs/ir_nl.yaml
 # Output
 runs/ir_verdict_b.yaml — in the following format.
 
+pass: <true only if every sentence is supported; otherwise false>
 results:
   - id: <S id>
-    evidence: [<N ids that the sentence corresponds to>]
-    mapping: <in detail: split the sentence into its parts, and for each part, quote the exact phrase in a statement that corresponds to it, name that statement, and describe any difference in wording or scope; for a part with no corresponding phrase, state that nothing corresponds to it>
+    evidence: [<N ids that this sentence matches>]
+    supported: <true | false>
+    reason: <in detail, whether supported is true or false: split the sentence into its parts, and for each part, quote the exact phrase in a statement that supports it, name that statement, and explain how the phrase supports the part, including any difference in wording or scope; when supported is false, state which part no statement supports or which part is stated differently>
 
 # Conditions
 1. Read only the files listed in Input. Do not read or refer to any other file, including the IR and the report.
-2. Describe every sentence of the SRS in order.
-3. Only describe correspondences and differences. Do not decide whether the sentence is supported, and do not write pass or fail.
-4. If no statement corresponds to the sentence, write evidence: [] and state so in mapping.
+2. Check every sentence of the SRS in order.
+3. A sentence is supported if everything it states semantically matches what ir_nl.yaml states. List all the statements it matches in evidence. If any part of the sentence matches no statement, set supported to false.
+4. If no statement matches the sentence, write evidence: [] and set supported to false.
