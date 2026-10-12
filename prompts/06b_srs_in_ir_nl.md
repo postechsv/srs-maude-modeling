@@ -12,6 +12,7 @@ pass: <true only if every sentence is supported; otherwise false>
 results:
   - id: <S id>
     evidence: [<N ids that this sentence matches>]
+    unrelated: [<every other N id, each compared with this sentence and found not to match it>]
     supported: <true | false>
     reason: <in detail, whether supported is true or false: split the sentence into its parts, and for each part, quote the exact phrase in a statement that supports it, name that statement, and explain how the phrase supports the part, including any difference in wording or scope; when supported is false, state which part no statement supports or which part is stated differently>
 
@@ -20,3 +21,4 @@ results:
 2. Check every sentence of the SRS in order.
 3. A sentence is supported if everything it states semantically matches what ir_nl.yaml states. List all the statements it matches in evidence. If any part of the sentence matches no statement, set supported to false.
 4. If no statement matches the sentence, write evidence: [] and set supported to false.
+5. Compare each sentence with every statement, one at a time. Put each N id in evidence if the sentence matches it, and in unrelated otherwise. Every N id must appear in exactly one of evidence and unrelated.
