@@ -24,7 +24,7 @@ runs/report.yaml — written according to report.md.
 14. Use descriptive variable names that clearly indicate what each variable represents. Distinguish individual objects from collections, and distinguish input, existing, and resulting values where relevant. Avoid single-letter variable names and abbreviations.
 
 15. Start each sentence on a new line within each field, keeping all lines of the field value at the same indentation level.
-16. Do not introduce separate failure-handling rules unless explicitly required by the SRS. Express prohibitions and restrictions as preconditions or guards of the corresponding operation rules.
+16. Do not introduce separate failure-handling rules unless explicitly required by the SRS. Express prohibitions and restrictions as guards of the corresponding operation rules, so that a prohibited request does not apply the rule. Do not restate or check the constraints declared in static_comp.yaml in any rule.
 17. Put one blank line between rules.
 18. In postcondition.common, write only how each calculated value used in the rule is calculated.
 19. If runs/feedback.yaml exists, it describes problems found in a previous IR. Build the IR so that none of these problems remain.
