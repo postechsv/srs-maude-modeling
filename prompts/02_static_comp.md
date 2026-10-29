@@ -19,5 +19,5 @@ runs/report.yaml — written according to report.md.
 8. Do not declare results or records that the SRS does not require.
 9. If runs/feedback.yaml exists, it describes problems found in a previous IR. Build the IR so that none of these problems remain.
 10. Distinguish the following two kinds of conditions, and declare only constraints in constraints.
-   - constraint: a condition among multiple objects that every state of the system must satisfy, such as the uniqueness of a value among objects. Write it as a condition on the state, not as a check performed by an operation.
-   - rule condition: a condition on an individual request or object, such as a limit on a value supplied by a request. It is checked only when a request is accepted and is written in the Dynamic IR, not in constraints.
+   - constraint: the uniqueness of a value that identifies an object among the objects of its class, which every state of the system must satisfy. Write it as a condition on the state, not as a check performed by an operation.
+   - rule condition: any other condition, such as a limit on a value supplied by a request or a restriction on how objects may be related to each other. It is checked only when a request is accepted and is written in the Dynamic IR, not in constraints.
