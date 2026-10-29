@@ -15,6 +15,5 @@ runs/model.maude — a Maude object-oriented module.
 6. Represent the messages declared in static_comp.yaml as Maude messages of sort Msg.
 7. Do not define an initial state. It is written separately.
 8. The left-hand side and the right-hand side of each rule consist only of objects and messages written out explicitly; do not wrap them in function calls or produce them with function calls. Functions may appear only inside attribute values and conditions.
-9. Keep every object at the top level of the configuration and represent a relationship between objects, including a contain relationship, by an attribute that holds the identity (Oid) of the related object, as in the Person and Rental examples in docs/maude_oo_rule_form.md. Do not put objects inside attribute values.
 10. Write the constraints declared in static_comp.yaml as one operation valid : Configuration -> Bool defined only by equations, so that valid of a configuration is false exactly when the configuration violates one of the constraints. Do not use valid in any rule.
 11. If runs/feedback.yaml exists, it describes problems found in a previous Maude model. Build the Maude model so that none of these problems remain.
