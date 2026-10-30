@@ -14,6 +14,7 @@ Always follow Common Conditions, then the section for the mode.
 # Input
 inputs/srs_numbered.yaml, runs/static_comp.yaml, schemas/dynamic_comp_schema.yaml, schemas/report_schema.yaml, the report-writing skill, feedback/ir.yaml
 - feedback/ir.yaml lists problems found in previous IRs. Each entry has its history version and failed step. Its ids and IR terms refer to that version.
+- The latest history/vN/ is the one with the largest N.
 - For revision, also: dynamic_comp.yaml and report.yaml in the latest history/vN/.
 - To understand a feedback entry, if needed: the history/vN/ folder of its version.
 
@@ -46,5 +47,5 @@ runs/report.yaml — written according to the report-writing skill.
 
 # Revision
 1. Take dynamic_comp.yaml and the DEC-DYNAMIC entries of report.yaml from the latest history/vN/, and edit them instead of writing new ones.
-2. Fix only the parts the feedback requires, the parts those fixes affect, and the parts affected by changes in runs/static_comp.yaml. Keep everything else unchanged.
+2. Fix only the parts the feedback requires, the parts those fixes affect, and the parts that no longer match runs/static_comp.yaml. Keep everything else unchanged.
 3. Make sure none of the feedback problems remain.

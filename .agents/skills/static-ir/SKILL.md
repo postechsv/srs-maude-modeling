@@ -14,6 +14,7 @@ Always follow Common Conditions, then the section for the mode.
 # Input
 inputs/srs_numbered.yaml, schemas/static_comp_schema.yaml, schemas/report_schema.yaml, the report-writing skill, feedback/ir.yaml
 - feedback/ir.yaml lists problems found in previous IRs. Each entry has its history version and failed step. Its ids and IR terms refer to that version.
+- The latest history/vN/ is the one with the largest N.
 - For revision, also: static_comp.yaml and report.yaml in the latest history/vN/.
 - To understand a feedback entry, if needed: the history/vN/ folder of its version.
 

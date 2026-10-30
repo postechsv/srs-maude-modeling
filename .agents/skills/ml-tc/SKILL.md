@@ -12,9 +12,10 @@ Mode:
 Check only that version to choose the mode. Always follow Common Conditions, then the section for the mode.
 
 # Input
-inputs/hl_tc.yaml, runs/static_comp.yaml, runs/dynamic_comp.yaml, schemas/ml_tc_report_schema.yaml, the ml-tc-report-writing skill
-For revision, also:
+inputs/hl_tc.yaml, runs/static_comp.yaml, runs/dynamic_comp.yaml, schemas/ml_tc_report_schema.yaml, the ml-tc-report-writing skill, feedback/ml_tc.yaml
 - feedback/ml_tc.yaml: problems found in previous ML TCs. Each entry has its history version and failed step. Its ids and IR terms refer to that version.
+- The latest history/vN/ is the one with the largest N.
+For revision, also:
 - ml_tc.yaml and ml_tc_report.yaml in the latest history/vN/.
 - To understand a feedback entry, if needed: the history/vN/ folder of its version.
 

@@ -12,9 +12,10 @@ Mode:
 Check only that version to choose the mode. Always follow Common Conditions, then the section for the mode.
 
 # Input
-runs/static_comp.yaml, runs/dynamic_comp.yaml, docs/maude_oo_rule_form.md, the maude-reference skill
-For revision, also:
+runs/static_comp.yaml, runs/dynamic_comp.yaml, docs/maude_oo_rule_form.md, the maude-reference skill, feedback/maude_model.yaml
 - feedback/maude_model.yaml: problems found in previous Maude models. Each entry has its history version and failed step. Its ids and IR terms refer to that version.
+- The latest history/vN/ is the one with the largest N.
+For revision, also:
 - model.maude in the latest history/vN/.
 - To understand a feedback entry, if needed: the history/vN/ folder of its version.
 

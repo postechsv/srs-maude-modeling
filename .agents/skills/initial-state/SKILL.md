@@ -12,9 +12,10 @@ Mode:
 Check only that version to choose the mode. Always follow Common Conditions, then the section for the mode.
 
 # Input
-runs/ml_tc.yaml, runs/model.maude, the maude-reference skill
-For revision, also:
+runs/ml_tc.yaml, runs/model.maude, the maude-reference skill, feedback/initial_state.yaml
 - feedback/initial_state.yaml: problems found in previous initial states. Each entry has its history version and failed step. Its ids and IR terms refer to that version.
+- The latest history/vN/ is the one with the largest N.
+For revision, also:
 - initial_state.maude in the latest history/vN/.
 - To understand a feedback entry, if needed: the history/vN/ folder of its version.
 
