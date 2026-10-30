@@ -47,5 +47,5 @@ runs/report.yaml — written according to the report-writing skill.
 
 # Revision
 1. Take dynamic_comp.yaml and the DEC-DYNAMIC entries of report.yaml from the latest history/vN/, and edit them instead of writing new ones.
-2. Fix only the parts the feedback requires, the parts those fixes affect, and the parts that no longer match runs/static_comp.yaml. Keep everything else unchanged.
-3. Make sure none of the feedback problems remain.
+2. Make sure none of the problems in feedback/ir.yaml appear in the result.
+3. Fix only the parts this requires, the parts those fixes affect, and the parts that no longer match runs/static_comp.yaml. Keep everything else unchanged.
