@@ -24,8 +24,6 @@ runs/report.yaml — written according to the report-writing skill.
 
 # Common Conditions
 1. Each rule must describe one atomic state transition. Keep all effects that must occur together within the same rule. For the same message, use separate rules when different conditions lead to different effects.
-   - When a rule acts on a collection attribute value, describe the change as one value of that attribute, so that the rule's result has a fixed shape.
-   - When a rule sends messages to, creates, or removes a runtime-sized set of objects, write one rule that handles one object and fires once per object, and one rule that ends the processing. Declare what they need in static_comp.yaml.
 2. Number ids so that no id is duplicated within the file.
 3. In trace, list the SRS sentences that directly support the rule.
 5. Use names, types, and terminology consistent with static_comp.yaml.

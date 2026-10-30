@@ -25,13 +25,11 @@ runs/model.maude — a Maude object-oriented module.
 # Common Conditions
 1. Read docs/maude_oo_rule_form.md first and follow it with priority. For any other syntax you need, refer to the maude-reference skill.
 2. Convert each rule so that precondition.msgs and precondition.objects become the left-hand side, guard becomes the condition, and postcondition.msgs, postcondition.objects, and postcondition.common become the right-hand side. Use rl when guard is empty, and crl otherwise.
-3. Convert each rule in dynamic_comp.yaml into exactly one Maude rule. Do not add, split, merge, or omit rules. Apart from the attributes that represent relationships, do not declare classes, messages, or attributes that are not in static_comp.yaml.
 4. Use the rule id as the rule label.
 5. Preserve the variable names used in the IR exactly. Do not rename or abbreviate them.
 6. Represent the messages declared in static_comp.yaml as Maude messages of sort Msg.
 7. Do not define an initial state. It is written separately.
 8. The left-hand side and the right-hand side of each rule consist only of objects and messages written out explicitly; do not wrap them in function calls or produce them with function calls. Functions may appear only inside attribute values and conditions.
-9. Keep every object at the top level, and represent each relationship in static_comp.yaml as attributes holding the identifiers of the related objects.
 10. Write the constraints declared in static_comp.yaml as one operation valid : Configuration -> Bool defined only by equations, so that valid of a configuration is false exactly when the configuration violates one of the constraints. Do not use valid in any rule.
 
 # Generation
