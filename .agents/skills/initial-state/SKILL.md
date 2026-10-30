@@ -6,30 +6,21 @@ description: Pipeline step 12 (Initial State Generation). Use only when the Mast
 [Initial State Generation]
 Write the initial state of each ML test case in Maude.
 
-Mode:
-- Revision: the last entry of feedback/initial_state.yaml has the same version as the latest history/vN/.
-- Generation: otherwise.
-Check only that version to choose the mode. Always follow Common Conditions, then the section for the mode.
-
 # Input
-runs/ml_tc.yaml, runs/model.maude, the maude-reference skill, feedback/initial_state.yaml
-- feedback/initial_state.yaml: problems found in previous initial states. Each entry has its history version and failed step. Its ids and IR terms refer to that version.
-- The latest history/vN/ is the one with the largest N.
-For revision, also:
-- initial_state.maude in the latest history/vN/.
-- To understand a feedback entry, if needed: the history/vN/ folder of its version.
+runs/ml_tc.yaml, runs/model.maude, the maude-reference skill, runs/feedback.yaml (only if it exists)
+
+For repair and regression checking, also read history/vN/ml_tc.yaml, history/vN/model.maude, history/vN/initial_state.maude, history/vN/maude_result.yaml, history/vN/maude_output.txt, history/vN/feedback.yaml when present in this experiment only. Order existing vN directories by numeric N; history is read-only.
 
 # Output
 runs/initial_state.maude — a module importing the module in model.maude, defining one initial state per test case named init-<test case id>.
 
-# Common Conditions
+# Conditions
 1. Construct the initial state from the scenario, without assuming the expected outcome of the actions being tested.
 2. Do not modify the model or add new behavior.
+3. Apply the repair and regression checks below before completing this output.
 
-# Generation
-1. Build the initial states from the current ML TC and model.maude. Do not use feedback/initial_state.yaml.
-
-# Revision
-1. Take initial_state.maude from the latest history/vN/, and edit it instead of writing a new one.
-2. Make sure none of the problems in feedback/initial_state.yaml appear in the result.
-3. Fix only the parts this requires and the parts those fixes affect. Keep everything else unchanged.
+# Repair and regression checks
+1. Read the listed historical failures and relevant feedback across all versions, together with runs/feedback.yaml if present. In memory, track distinct errors by affected rule, declaration, or test-case id and cause, retaining fixed errors as regression checks. Verify the actual failing artifact and diagnostic in the same version; do not treat absent later feedback as proof of a fix.
+2. Start from the newest snapshot containing this output and its upstream inputs, using the nearest suitable earlier snapshot if needed while retaining newer failures. Compare historical upstream inputs with the current inputs before reuse; current inputs are authoritative. Generate from scratch only if no baseline exists.
+3. Repair only the failing fragment and dependencies affected by it or by changed upstream inputs. Preserve unaffected rules, declarations, test cases, names, and behavior. Do not change IR semantics or test expectations to hide an error, and do not copy incompatible historical code over current inputs. Write only this stage's normal complete output.
+4. Before finishing, compare against the baseline, recheck accumulated errors and affected dependencies, and verify that previously correct behavior is preserved. Keep the repair checklist in memory; do not modify history, feedback, or upstream files. These checks do not replace step 14's execution or establish a test pass.
