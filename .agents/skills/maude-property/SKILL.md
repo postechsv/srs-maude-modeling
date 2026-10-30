@@ -7,7 +7,7 @@ description: Pipeline step 13 (Maude Property Generation). Use only when the Mas
 Write the test of each ML test case as Maude search commands.
 
 # Input
-runs/ml_tc.yaml, runs/model.maude, runs/initial_state.maude, docs/Maude3.5.1-manual.pdf, runs/feedback.yaml (only if it exists)
+runs/ml_tc.yaml, runs/model.maude, runs/initial_state.maude, the maude-reference skill, runs/feedback.yaml (only if it exists)
 
 # Output
 runs/property.maude — search commands only.

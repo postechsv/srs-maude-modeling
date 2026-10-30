@@ -7,7 +7,7 @@ description: Pipeline step 12 (Initial State Generation). Use only when the Mast
 Write the initial state of each ML test case in Maude.
 
 # Input
-runs/ml_tc.yaml, runs/model.maude, docs/Maude3.5.1-manual.pdf, runs/feedback.yaml (only if it exists)
+runs/ml_tc.yaml, runs/model.maude, the maude-reference skill, runs/feedback.yaml (only if it exists)
 
 # Output
 runs/initial_state.maude — a module importing the module in model.maude, defining one initial state per test case named init-<test case id>.
