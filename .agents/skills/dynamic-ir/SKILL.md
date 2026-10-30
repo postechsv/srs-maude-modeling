@@ -16,7 +16,7 @@ For revision, also:
 
 # Output
 runs/dynamic_comp.yaml — follows the format of dynamic_comp_schema.yaml.
-runs/report.yaml — written according to report.md.
+runs/report.yaml — written according to the report-writing skill.
 
 # Common Conditions
 1. Each rule must describe one atomic state transition. Keep all effects that must occur together within the same rule. For the same message, use separate rules when different conditions lead to different effects.
@@ -24,7 +24,7 @@ runs/report.yaml — written according to report.md.
 3. In trace, list the SRS sentences that directly support the rule.
 5. Use names, types, and terminology consistent with static_comp.yaml.
 6. Use only the classes, attributes, relationships, enumerations, and messages declared in static_comp.yaml. Do not introduce new ones.
-   - Within these elements, resolve any ambiguity in the SRS and make all additional decisions needed to translate the IR into Maude without further design decisions. Explicitly reflect these decisions in the IR and record them according to report.md.
+   - Within these elements, resolve any ambiguity in the SRS and make all additional decisions needed to translate the IR into Maude without further design decisions. Explicitly reflect these decisions in the IR and record them according to the report-writing skill.
 8. Using the definitions in static_comp.yaml, write each field in natural language following the sentence templates in dynamic_comp_schema.yaml. Replace every bracketed placeholder with concrete information. Write precondition, guard, and postcondition in sufficient detail to construct the Maude LHS, condition, and RHS, respectively, without inferring missing information from the other fields.
 9. For each object, mention only the attributes the rule reads or changes. Attributes not mentioned remain unchanged.
 10. Keep the definitions of shared state structures and elements consistent across all rules.

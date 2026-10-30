@@ -16,7 +16,7 @@ runs/ml_tc.yaml — in the following format.
   scenario: <the scenario, in the terms of the IR>
   expected: <the expected result, in the terms of the IR>
 
-runs/ml_tc_report.yaml — written according to ml_tc_report.md.
+runs/ml_tc_report.yaml — written according to the ml-tc-report-writing skill.
 
 # Conditions
 1. Read only the files listed in Input.

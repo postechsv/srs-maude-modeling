@@ -16,12 +16,12 @@ For revision, also:
 
 # Output
 runs/static_comp.yaml — follows the format of static_comp_schema.yaml.
-runs/report.yaml — written according to report.md.
+runs/report.yaml — written according to the report-writing skill.
 
 # Common Conditions
 1. Number ids so that no id is duplicated within the file.
 2. In trace, list the SRS sentences that directly support the element.
-3. Whatever cannot be determined from the SRS alone, decide it yourself, explicitly reflect the decision in the IR, including the declarations it requires, and record it according to report.md.
+3. Whatever cannot be determined from the SRS alone, decide it yourself, explicitly reflect the decision in the IR, including the declarations it requires, and record it according to the report-writing skill.
 4. Put one blank line between the top-level keys (classes, relationships, enumerations, messages, constraints).
 5. When a type name alone does not fully specify its meaning or representation, include the missing details in parentheses after the type name in the type field. (ex. Date (YYYY-MM-DD))
 6. List the recipient as the first parameter of each message.
