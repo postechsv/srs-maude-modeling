@@ -5,12 +5,12 @@ description: Pipeline step 03 (Dynamic IR Generation). Use only when the Master 
 
 [Dynamic IR Generation]
 Read the SRS and build the Dynamic IR.
-If feedback/ir.yaml is empty, follow Common Conditions and Generation. Otherwise, follow Common Conditions and Regeneration.
-Common Conditions must always be followed, in both generation and regeneration.
+If feedback/ir.yaml is empty, follow Common Conditions and Generation. Otherwise, follow Common Conditions and Revision.
+Common Conditions must always be followed, in both generation and revision.
 
 # Input
 inputs/srs_numbered.yaml, runs/static_comp.yaml, schemas/dynamic_comp_schema.yaml, schemas/report_schema.yaml, the report-writing skill, feedback/ir.yaml
-For regeneration, also:
+For revision, also:
 - dynamic_comp.yaml and report.yaml in the latest history/vN/ (largest N): the IR and report to fix.
 - any history/vN/ folder whose version appears in feedback/ir.yaml: read it when needed to understand an entry, such as what an N id or decision id meant in that version.
 
@@ -41,7 +41,7 @@ runs/report.yaml — written according to report.md.
 # Generation
 1. Build the Dynamic IR from the SRS.
 
-# Regeneration
+# Revision
 1. feedback/ir.yaml describes problems found in previous IRs; each entry gives the history version and the step where it failed. N ids, decision ids, and IR terms in an entry refer to the artifacts of its version.
 2. Start from dynamic_comp.yaml and the DEC-DYNAMIC entries of report.yaml in the latest history/vN/. Fix only the parts these problems require and the parts affected by those fixes or by changes in runs/static_comp.yaml; keep all other parts unchanged.
 3. Make sure none of the problems in feedback/ir.yaml remain.
