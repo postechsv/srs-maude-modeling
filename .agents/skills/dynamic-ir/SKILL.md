@@ -5,14 +5,17 @@ description: Pipeline step 03 (Dynamic IR Generation). Use only when the Master 
 
 [Dynamic IR Generation]
 Read the SRS and build the Dynamic IR.
-If feedback/ir.yaml is empty, follow Common Conditions and Generation. Otherwise, follow Common Conditions and Revision.
-Common Conditions must always be followed, in both generation and revision.
+
+Mode:
+- Generation: feedback/ir.yaml is empty.
+- Revision: otherwise.
+Always follow Common Conditions, then the section for the mode.
 
 # Input
 inputs/srs_numbered.yaml, runs/static_comp.yaml, schemas/dynamic_comp_schema.yaml, schemas/report_schema.yaml, the report-writing skill, feedback/ir.yaml
-For revision, also:
-- dynamic_comp.yaml and report.yaml in the latest history/vN/ (largest N): the IR and report to fix.
-- any history/vN/ folder whose version appears in feedback/ir.yaml: read it when needed to understand an entry, such as what an N id or decision id meant in that version.
+- feedback/ir.yaml lists problems found in previous IRs. Each entry has its history version and failed step. Its ids and IR terms refer to that version.
+- For revision, also: dynamic_comp.yaml and report.yaml in the latest history/vN/.
+- To understand a feedback entry, if needed: the history/vN/ folder of its version.
 
 # Output
 runs/dynamic_comp.yaml — follows the format of dynamic_comp_schema.yaml.
@@ -42,6 +45,6 @@ runs/report.yaml — written according to the report-writing skill.
 1. Build the Dynamic IR from the SRS.
 
 # Revision
-1. feedback/ir.yaml describes problems found in previous IRs; each entry gives the history version and the step where it failed. N ids, decision ids, and IR terms in an entry refer to the artifacts of its version.
-2. Start from dynamic_comp.yaml and the DEC-DYNAMIC entries of report.yaml in the latest history/vN/. Fix only the parts these problems require and the parts affected by those fixes or by changes in runs/static_comp.yaml; keep all other parts unchanged.
-3. Make sure none of the problems in feedback/ir.yaml remain.
+1. Take dynamic_comp.yaml and the DEC-DYNAMIC entries of report.yaml from the latest history/vN/, and edit them instead of writing new ones.
+2. Fix only the parts the feedback requires, the parts those fixes affect, and the parts affected by changes in runs/static_comp.yaml. Keep everything else unchanged.
+3. Make sure none of the feedback problems remain.
