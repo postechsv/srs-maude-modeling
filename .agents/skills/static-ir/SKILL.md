@@ -34,7 +34,6 @@ runs/report.yaml — written according to the report-writing skill.
 9. Distinguish the following two kinds of conditions, and declare only constraints in constraints.
    - constraint: the uniqueness of a value that identifies an object among the objects of its class, which every state of the system must satisfy. Write it as a condition on the state, not as a check performed by an operation.
    - rule condition: any other condition, such as a limit on a value supplied by a request or a restriction on how objects may be related to each other. It is checked only when a request is accepted and is written in the Dynamic IR, not in constraints.
-10. Declare a class for each domain concept whose state the system stores and manages. As the only exception, when a single rule must create or remove several instances of a class at once, in a number decided at runtime, and the class never receives a message, declare those instances as one collection attribute value of the object that uses them instead of a class.
 
 # Generation
 1. Build the Static IR from the SRS.
