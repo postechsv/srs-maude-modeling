@@ -14,3 +14,4 @@ runs/report.yaml — follows the format of report_schema.yaml.
 2. Number ids according to the IR being built, such as DEC-STATIC-01 or DEC-DYNAMIC-01.
 3. For a decision not reflected in the IR, leave target as an empty list.
 4. If report.yaml already exists, append entries to the end of the file without reading its contents.
+5. Record every decision the IR makes that the SRS does not determine, however minor (for example, values, comparisons, orderings, defaults, and so on). Write each as concretely as the IR, with the exact details the IR uses for it.
