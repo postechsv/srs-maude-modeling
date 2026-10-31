@@ -4,9 +4,9 @@ description: Pipeline step 06 (IR Reverse Interpretation Verdict). Use only when
 ---
 
 [IR Reverse Interpretation Verdict]
-This step checks whether the IR is semantically correct by comparing ir_nl.yaml with the SRS and the report in both directions.
-ir_nl.yaml is a natural-language explanation of the IR, written without seeing the SRS or the report.
-The IR was built from the SRS by adding the decisions recorded in the report.
+This step checks whether the IR is semantically correct by comparing ir_nl.yaml with the SRS and the IR report in both directions.
+ir_nl.yaml is a natural-language explanation of the IR, written without seeing the SRS or the IR report.
+The IR was built from the SRS by adding the decisions recorded in the IR report.
 
 # Sub-steps
 Run the following skills in order. Run each one with a new subagent.

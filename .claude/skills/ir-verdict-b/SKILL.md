@@ -22,7 +22,7 @@ results:
     reason: <in detail, whether supported is true or false: split the sentence into its parts, and for each part, quote the exact phrase in a statement that supports it, name that statement, and explain how the phrase supports the part, including any difference in wording or scope; when supported is false, state which part no statement supports or which part is stated differently>
 
 # Conditions
-1. Read only the files listed in Input. Do not read or refer to any other file, including the IR and the report.
+1. Read only the files listed in Input. Do not read or refer to any other file, including the IR and the IR report.
 2. Check every sentence of the SRS in order.
 3. A sentence is supported if everything it states semantically matches what ir_nl.yaml states. List all the statements it matches in evidence. If any part of the sentence matches no statement, set supported to false.
 4. If no statement matches the sentence, write evidence: [] and set supported to false.

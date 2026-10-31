@@ -19,4 +19,4 @@ statements:
     text: <one statement>
 
 # Conditions
-1. Read only the IR files listed in Input. Do not read or refer to any other file, including the SRS and the report.
+1. Read only the IR files listed in Input. Do not read or refer to any other file, including the SRS and the IR report.

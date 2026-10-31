@@ -12,15 +12,15 @@ Mode:
 Always follow Common Conditions, then the section for the mode.
 
 # Input
-inputs/srs_numbered.yaml, runs/static_comp.yaml, schemas/dynamic_comp_schema.yaml, schemas/report_schema.yaml, the report-writing skill, feedback/ir.yaml
+inputs/srs_numbered.yaml, runs/static_comp.yaml, schemas/dynamic_comp_schema.yaml, schemas/ir_report_schema.yaml, the ir-report-writing skill, feedback/ir.yaml
 - feedback/ir.yaml lists problems found in previous IRs. Each entry has its history version and failed step. Its ids and IR terms refer to that version.
 - The latest history/vN/ is the one with the largest N.
-- For revision, also: dynamic_comp.yaml and report.yaml in the latest history/vN/.
+- For revision, also: dynamic_comp.yaml and ir_report.yaml in the latest history/vN/.
 - To understand a feedback entry, if needed: the history/vN/ folder of its version.
 
 # Output
 runs/dynamic_comp.yaml — follows the format of dynamic_comp_schema.yaml.
-runs/report.yaml — written according to the report-writing skill.
+runs/ir_report.yaml — written according to the ir-report-writing skill.
 
 # Common Conditions
 1. Each rule must describe one atomic state transition. Keep all effects that must occur together within the same rule. For the same message, use separate rules when different conditions lead to different effects.
@@ -28,7 +28,7 @@ runs/report.yaml — written according to the report-writing skill.
 3. In trace, list the SRS sentences that directly support the rule.
 5. Use names, types, and terminology consistent with static_comp.yaml.
 6. Use only the classes, attributes, relationships, enumerations, and messages declared in static_comp.yaml. Do not introduce new ones.
-   - Within these elements, resolve any ambiguity in the SRS and make all additional decisions needed to translate the IR into Maude without further design decisions. Explicitly reflect these decisions in the IR and record them according to the report-writing skill.
+   - Within these elements, resolve any ambiguity in the SRS and make all additional decisions needed to translate the IR into Maude without further design decisions. Explicitly reflect these decisions in the IR and record them according to the ir-report-writing skill.
 8. Using the definitions in static_comp.yaml, write each field in natural language following the sentence templates in dynamic_comp_schema.yaml. Replace every bracketed placeholder with concrete information. Write precondition, guard, and postcondition in sufficient detail to construct the Maude LHS, condition, and RHS, respectively, without inferring missing information from the other fields.
 9. For each object, mention only the attributes the rule reads or changes. Attributes not mentioned remain unchanged.
 10. Keep the definitions of shared state structures and elements consistent across all rules.
@@ -46,6 +46,6 @@ runs/report.yaml — written according to the report-writing skill.
 1. Build the Dynamic IR from the SRS.
 
 # Revision
-1. Take dynamic_comp.yaml and the DEC-DYNAMIC entries of report.yaml from the latest history/vN/, and edit them instead of writing new ones.
+1. Take dynamic_comp.yaml and the DEC-DYNAMIC entries of ir_report.yaml from the latest history/vN/, and edit them instead of writing new ones.
 2. Make sure none of the problems in feedback/ir.yaml appear in the result.
 3. Fix only the parts this requires, the parts those fixes affect, and the parts that no longer match runs/static_comp.yaml. Keep everything else unchanged.

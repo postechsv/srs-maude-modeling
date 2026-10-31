@@ -17,12 +17,12 @@ runs/ml_tc_verdict_a.yaml — in the following format.
 pass: <true only if every statement is supported; otherwise false>
 results:
   - id: <N id>
-    evidence: [<test case ids and report ids that support this statement>]
+    evidence: [<test case ids and ML TC report ids that support this statement>]
     supported: <true | false>
-    reason: <in detail, whether supported is true or false: split the statement into its parts, and for each part, quote the exact phrase in the test case or a report entry that supports it, name that test case or entry, and explain how the phrase supports the part, including any difference in wording or scope; when supported is false, state which part nothing supports, or what the test case or report states instead>
+    reason: <in detail, whether supported is true or false: split the statement into its parts, and for each part, quote the exact phrase in the test case or an ML TC report entry that supports it, name that test case or entry, and explain how the phrase supports the part, including any difference in wording or scope; when supported is false, state which part nothing supports, or what the test case or ML TC report states instead>
 
 # Conditions
 1. Read only the files listed in Input. Do not read or refer to any other file, including the ML TC, the IR, and the SRS.
 2. Check every statement of ml_tc_nl.yaml in order.
-3. A statement is supported if what it states semantically matches what its test case in hl_tc.yaml or the ML TC report entries for that test case state. List the test case or report entries it matches in evidence.
+3. A statement is supported if what it states semantically matches what its test case in hl_tc.yaml or the ML TC report entries for that test case state. List the test case or ML TC report entries it matches in evidence.
 4. If nothing supports the statement, write evidence: [] and set supported to false.

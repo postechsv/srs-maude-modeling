@@ -12,20 +12,20 @@ Mode:
 Always follow Common Conditions, then the section for the mode.
 
 # Input
-inputs/srs_numbered.yaml, schemas/static_comp_schema.yaml, schemas/report_schema.yaml, the report-writing skill, feedback/ir.yaml
+inputs/srs_numbered.yaml, schemas/static_comp_schema.yaml, schemas/ir_report_schema.yaml, the ir-report-writing skill, feedback/ir.yaml
 - feedback/ir.yaml lists problems found in previous IRs. Each entry has its history version and failed step. Its ids and IR terms refer to that version.
 - The latest history/vN/ is the one with the largest N.
-- For revision, also: static_comp.yaml and report.yaml in the latest history/vN/.
+- For revision, also: static_comp.yaml and ir_report.yaml in the latest history/vN/.
 - To understand a feedback entry, if needed: the history/vN/ folder of its version.
 
 # Output
 runs/static_comp.yaml — follows the format of static_comp_schema.yaml.
-runs/report.yaml — written according to the report-writing skill.
+runs/ir_report.yaml — written according to the ir-report-writing skill.
 
 # Common Conditions
 1. Number ids so that no id is duplicated within the file.
 2. In trace, list the SRS sentences that directly support the element.
-3. Whatever cannot be determined from the SRS alone, decide it yourself, explicitly reflect the decision in the IR, including the declarations it requires, and record it according to the report-writing skill.
+3. Whatever cannot be determined from the SRS alone, decide it yourself, explicitly reflect the decision in the IR, including the declarations it requires, and record it according to the ir-report-writing skill.
 4. Put one blank line between the top-level keys (classes, relationships, enumerations, messages, constraints).
 5. When a type name alone does not fully specify its meaning or representation, include the missing details in parentheses after the type name in the type field. (ex. Date (YYYY-MM-DD))
 6. List the recipient as the first parameter of each message.
@@ -39,6 +39,6 @@ runs/report.yaml — written according to the report-writing skill.
 1. Build the Static IR from the SRS.
 
 # Revision
-1. Take static_comp.yaml and the DEC-STATIC entries of report.yaml from the latest history/vN/, and edit them instead of writing new ones.
+1. Take static_comp.yaml and the DEC-STATIC entries of ir_report.yaml from the latest history/vN/, and edit them instead of writing new ones.
 2. Make sure none of the problems in feedback/ir.yaml appear in the result.
 3. Fix only the parts this requires and the parts those fixes affect. Keep everything else unchanged.
