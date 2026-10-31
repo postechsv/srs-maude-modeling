@@ -29,7 +29,7 @@ runs/model.maude — a Maude object-oriented module.
 5. Preserve the variable names used in the IR exactly. Do not rename or abbreviate them.
 6. Represent the messages declared in static_comp.yaml as Maude messages of sort Msg.
 7. Do not define an initial state. It is written separately.
-8. The left-hand side and the right-hand side of each rule consist only of objects and messages written out explicitly; do not wrap them in function calls or produce them with function calls. Functions may appear only inside attribute values and conditions.
+8. At the top level of each side of a rule, write only objects and messages; do not wrap them in a function call. Inside attribute values and conditions, functions may be used.
 10. Write the constraints declared in static_comp.yaml as one operation valid : Configuration -> Bool defined only by equations, so that valid of a configuration is false exactly when the configuration violates one of the constraints. Do not use valid in any rule.
 
 # Generation
