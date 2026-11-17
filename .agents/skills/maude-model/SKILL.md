@@ -26,7 +26,14 @@ runs/model.maude — a Maude object-oriented module.
 1. Read docs/maude_oo_rule_form.md first and follow it with priority. For any other syntax you need, refer to the maude-reference skill.
 2. By default, convert each rule so that precondition.msgs and precondition.objects become the left-hand side, guard becomes the condition, and postcondition.msgs, postcondition.objects, and postcondition.common become the right-hand side. Use rl when guard is empty, and crl otherwise. When Additional Rule 5 in docs/maude_oo_rule_form.md applies, split the rule as it describes.
 4. By default, use the rule id as the rule label. For a rule split by Additional Rule 5, use the labels it describes.
-5. Preserve the variable names used in the IR exactly. Do not rename or abbreviate them.
+5. Keep the names used in the IR, but write them following the Maude naming conventions below. Change only the case of letters; do not otherwise rename or abbreviate any name.
+   - Module names: all capital letters, with hyphens between words (for example, FOO-BAR).
+   - Sort and class names: the first letter of each word in upper case, with words joined without spaces or hyphens (for example, FooBar).
+   - View names: the first letter in upper case (for example, Foo).
+   - Parameter names: a single capital letter (for example, X).
+   - Variable names: the first letter in upper case (for example, fooBar becomes FooBar).
+   - Operator names, including message names: the first letter in lower case, with each later word starting with an upper-case letter (for example, FooBar becomes fooBar).
+   - The first argument of every message is the Oid of the object that receives it.
 6. Represent the messages declared in static_comp.yaml as Maude messages of sort Msg.
 7. Do not define an initial state. It is written separately.
 8. At the top level of each side of a rule, write only objects and messages; do not wrap them in a function call. Inside attribute values and conditions, functions may be used.
