@@ -24,8 +24,8 @@ runs/model.maude — a Maude object-oriented module.
 
 # Common Conditions
 1. Read docs/maude_oo_rule_form.md first and follow it with priority. For any other syntax you need, refer to the maude-reference skill.
-2. Convert each rule so that precondition.msgs and precondition.objects become the left-hand side, guard becomes the condition, and postcondition.msgs, postcondition.objects, and postcondition.common become the right-hand side. Use rl when guard is empty, and crl otherwise.
-4. Use the rule id as the rule label.
+2. By default, convert each rule so that precondition.msgs and precondition.objects become the left-hand side, guard becomes the condition, and postcondition.msgs, postcondition.objects, and postcondition.common become the right-hand side. Use rl when guard is empty, and crl otherwise. When Additional Rule 5 in docs/maude_oo_rule_form.md applies, split the rule as it describes.
+4. By default, use the rule id as the rule label. For a rule split by Additional Rule 5, use the labels it describes.
 5. Preserve the variable names used in the IR exactly. Do not rename or abbreviate them.
 6. Represent the messages declared in static_comp.yaml as Maude messages of sort Msg.
 7. Do not define an initial state. It is written separately.
