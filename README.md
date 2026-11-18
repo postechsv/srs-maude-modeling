@@ -10,7 +10,7 @@ An LLM pipeline that turns natural-language requirements into an executable form
 
 - **Model generation:** SRS → IR (static / dynamic) → Maude object-oriented model
 - **Test generation:** high-level test cases (HL TC) → mid-level test cases (ML TC) → Maude initial states and search commands
-- **Validation:** the Maude model is executed to decide whether each test case passes
+- **Testing:** the Maude model is executed to decide whether each test case passes
 - Each stage is followed by reverse-translation and judgment steps. On failure, the pipeline goes back and regenerates the earlier stage.
 - Generation steps run on GPT (Codex); judgment steps run on Claude.
 
